@@ -2,9 +2,19 @@
 
 ESP32 sketch for the mini record player: reading an NFC tag publishes its UID over MQTT; removing it publishes `removed`. The single NeoPixel shows red while disconnected, green when ready, and breathing blue while a tag is present. Playback is handled by your own MQTT subscriber, not by this sketch.
 
-## Hardware and libraries
+## 3D-printed record player
 
-- ESP32 board, PN532 reader set to **I2C mode**, and one WS2812/NeoPixel LED.
+The enclosure and mini vinyls are not my design. They are [geroulas](https://makerworld.com/en/@geroulas)'s [ESP32 NFC Mini Record Player](https://makerworld.com/en/models/1980570-esp32-nfc-mini-record-player-vinyl-tag-reader) on MakerWorld. It is a lovely snap-fit player: platter, tonearm, and little vinyls you stick NFC tags on, and it looks the part sitting on a shelf. This repo is only the firmware for my own build of that model. Download and print theirs.
+
+## Hardware
+
+- ESP32-WROOM-32 Development Board
+- NFC RFID Module PN532 (set to I2C mode)
+- LED SMD 5050 (WS2812/NeoPixel compatible)
+- NFC/RFID Stickers (25mm)
+
+## Software
+
 - Arduino IDE with the ESP32 board package.
 - Arduino libraries: **Adafruit PN532**, **Adafruit NeoPixel**, and **PubSubClient** (plus any dependencies requested by the library manager).
 
